@@ -12,16 +12,40 @@
 
 // --------------------INSTRUCTOR EXAMPLE: Create a function that takes in an array of numbers and returns an array with all the numbers multiplied by 3.
 
+// input: [1, 2, 3, 4]
+// output: [3, 6, 9, 12]
+
 // a) Create a test with expect statements for each of the variables provided.
 
-const numbersArray1 = [6, 7, 8, 9, 10]
+describe("multBy3", () => {
+  it ("returns an array with all the numbers multiplied by 3", () => {
+    const numbersArray1 = [6, 7, 8, 9, 10]
+    const numbersArray2 = [24, 27, 30, 33, 36]
+    expect(multBy3(numbersArray1)).toEqual([18, 21, 24, 27, 30])
+    expect(multBy3(numbersArray2)).toEqual([72, 81, 90, 99, 108])
+    
+  })
+})
+
+// ReferenceError: multBy3 is not defined
+
 // Expected output: [18, 21, 24, 27, 30]
-const numbersArray2 = [24, 27, 30, 33, 36]
 // Expected output: [72, 81, 90, 99, 108]
 
 // b) Create the function that makes the test pass.
 
 // Pseudo code:
+// set a parameter of array
+// iterate through the array (.map)
+// with each iteration multiply element by 3
+
+const multBy3 = (array) => {
+  return array.map(value => value * 3)
+}
+
+// Test Suites: 1 passed, 1 total
+// Tests:       1 passed, 1 total
+
 
 // --------------------1) Create a function that takes a object as an argument and decides if the number inside it is evenly divisible by three or not.
 
